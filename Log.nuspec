@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>org-kevoree-log</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>Kevoree Log</title>
     <authors>Manuel Leduc</authors>
     <owners>Kevoree</owners>
@@ -11,11 +11,11 @@
     <iconUrl>https://avatars3.githubusercontent.com/u/5556542?v=3&amp;s=200</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Lightweight logging library for Kevoree.</description>
-    <releaseNotes>First version</releaseNotes>
+    <releaseNotes>Second release of the first version</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>Kevoree Log</tags>
   </metadata>
   <files>
-    <file src="bin/Release/kevoree-dotnet-log.dll" target="lib/net40/kevoree-dotnet-log.dll" />
+    <file src="bin/Release/Log.dll" target="lib/net40/Log.dll" />
   </files>
 </package>
