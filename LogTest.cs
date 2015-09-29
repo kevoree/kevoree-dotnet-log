@@ -7,7 +7,7 @@ namespace Org.Kevoree.Log
 	[TestFixture]
 	public class LogTest
 	{
-		public LogTest ()
+        public LogTest ()
 		{
 		}
 

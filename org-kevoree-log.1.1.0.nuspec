@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>org-kevoree-log</id>
+        <version>1.1.0</version>
+        <title>kevoree-dotnet-log</title>
+        <authors>Manuel Leduc</authors>
+        <owners>Manuel Leduc</owners>
+        <licenseUrl>https://github.com/kevoree/kevoree-dotnet-log/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/kevoree/kevoree-dotnet-log</projectUrl>
+        <iconUrl>https://avatars3.githubusercontent.com/u/5556542?v=3&amp;s=200</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Kevoree Log</description>
+        <summary>Kevoree Logging system</summary>
+        <releaseNotes>Serializable + test</releaseNotes>
+        <copyright>Copyright 2015</copyright>
+        <tags>Kevoree Log</tags>
+        <dependencies>
+            <dependency id="NUnit" version="2.6.4" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="lib\net45\Log.dll" target="lib\net45\Log.dll" />
+    </files>
+</package>

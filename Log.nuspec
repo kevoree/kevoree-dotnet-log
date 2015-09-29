@@ -1,21 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <package >
   <metadata>
-    <id>org-kevoree-log</id>
-    <version>1.0.1</version>
-    <title>Kevoree Log</title>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
     <authors>Manuel Leduc</authors>
-    <owners>Kevoree</owners>
-    <licenseUrl>https://github.com/kevoree/kevoree-dotnet-log/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/kevoree/kevoree-dotnet-log</projectUrl>
-    <iconUrl>https://avatars3.githubusercontent.com/u/5556542?v=3&amp;s=200</iconUrl>
+    <owners>Manuel Leduc</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Lightweight logging library for Kevoree.</description>
-    <releaseNotes>Second release of the first version</releaseNotes>
+    <description>Kevoree Log</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2015</copyright>
-    <tags>Kevoree Log</tags>
+    <tags>Tag1 Tag2</tags>
   </metadata>
-  <files>
-    <file src="bin/Release/Log.dll" target="lib/net40/Log.dll" />
-  </files>
 </package>

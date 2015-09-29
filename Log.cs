@@ -7,6 +7,7 @@ using System.Reflection;
 namespace Org.Kevoree.Log
 {
 
+    [Serializable]
 	public class Log
 	{
 		private string category;
