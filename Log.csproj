@@ -35,12 +35,12 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDelegateLogger.cs" />
+    <Compile Include="LoggerSlave.cs" />
+    <Compile Include="LoggerMaster.cs" />
     <Compile Include="TestSerialization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="LogTest.cs" />
-    <Compile Include="LogFactory.cs" />
-    <Compile Include="Level.cs" />
+    <Compile Include="Logger.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -48,5 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\kevoree-dotnet-log-api\kevoree-dotnet-log-api.csproj">
+      <Project>{5d6a3c3e-703a-4af7-b8f2-8580f418ae50}</Project>
+      <Name>kevoree-dotnet-log-api</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
