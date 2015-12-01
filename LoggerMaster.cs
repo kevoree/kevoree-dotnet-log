@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Org.Kevoree.Log.Api;
 
 namespace Org.Kevoree.Log
@@ -11,42 +6,38 @@ namespace Org.Kevoree.Log
     public class LoggerMaster : Logger, IDelegateLogger
     {
 
-        private Dictionary<string, LoggerSlave> map = new Dictionary<string, LoggerSlave>();
+        private readonly Dictionary<string, LoggerSlave> _map = new Dictionary<string, LoggerSlave>();
+        private ILoggerAction _action = new ConsolePrintAction();
+
+        public ILoggerAction Action
+        {
+            set { _action = value; }
+        }
 
         public void forward(string caller, Level level, string message)
         {
-            if (level >= this.logLevel)
+            if (LevelComparator.pass(level,logLevel))
             {
-                StringBuilder sb = new StringBuilder();
-                sb.Append(DateTime.UtcNow.ToString("HH:mm:ss.fff"));
-                sb.Append(' ');
-                sb.Append(level);
-                sb.Append(' ');
-                sb.Append(caller);
-                sb.Append(' ');
-                sb.Append(message);
-                Console.WriteLine(sb.ToString());
+                _action.proceed(caller, level, message);
             }
         }
 
         public LoggerMaster(Level level, string name) : base(level, name, null)
         {
-            this.parentNode = this;
+            parentNode = this;
         }
 
 
         public ILogger getInstance(string name)
         {
-            var loggerSalve = new LoggerSlave(this.logLevel, name, this);
-            map.Add(name, loggerSalve);
+            var loggerSalve = new LoggerSlave(logLevel, name, this);
+            _map.Add(name, loggerSalve);
             return loggerSalve;
         }
 
         public ILogger getInstance(string nodeName, string name)
         {
-            var parentNode = map[nodeName];
-
-            return new Logger(Level.Trace, name, parentNode);
+            return new Logger(Level.Trace, name, _map[nodeName]);
         }
     }
 }

@@ -39,16 +39,22 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsolePrintAction.cs" />
     <Compile Include="IDelegateLogger.cs" />
+    <Compile Include="ILoggerAction.cs" />
+    <Compile Include="LevelComparator.cs" />
     <Compile Include="LoggerSlave.cs" />
     <Compile Include="LoggerMaster.cs" />
-    <Compile Include="TestSerialization.cs" />
+    <Compile Include="Test\TestLogLevel.cs" />
+    <Compile Include="Test\TestSerialization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Logger.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

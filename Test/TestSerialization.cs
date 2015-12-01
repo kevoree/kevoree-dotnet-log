@@ -1,11 +1,6 @@
-﻿using System;
-using NUnit.Framework;
-using System.IO;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using Org.Kevoree.Log.Api;
+﻿using NUnit.Framework;
 
-namespace Org.Kevoree.Log
+namespace Org.Kevoree.Log.Test
 {
 
 	[TestFixture]
