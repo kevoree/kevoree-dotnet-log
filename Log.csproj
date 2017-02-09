@@ -8,6 +8,8 @@
     <RootNamespace>Org.Kevoree.Log</RootNamespace>
     <AssemblyName>Log</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,15 +30,13 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="kevoree-dotnet-log-api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Org.Kevoree.Log.Api.1.0.0\lib\net40\kevoree-dotnet-log-api.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Desktop\mef2\MEF\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="kevoree-dotnet-log-api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>packages\Org.Kevoree.Log.Api.1.0.0\lib\net40\kevoree-dotnet-log-api.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.3.6.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsolePrintAction.cs" />

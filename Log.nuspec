@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>org-kevoree-log</id>
-        <version>1.2.1</version>
+        <version>1.2.2</version>
         <title>kevoree-dotnet-log</title>
         <authors>Manuel Leduc</authors>
         <owners>Manuel Leduc</owners>
@@ -16,11 +16,11 @@
         <copyright>Copyright 2015</copyright>
         <tags>Kevoree Log</tags>
         <dependencies>
-            <dependency id="NUnit" version="2.6.4" />
+            <dependency id="NUnit" version="3.6.0" />
             <dependency id="Org.Kevoree.Log.Api" version="1.0.0" />
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\Release\Log.dll" target="lib\net45\Log.dll" />
+        <file src="bin/Release/Log.dll" target="lib/net45/Log.dll" />
     </files>
 </package>
